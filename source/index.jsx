@@ -1,5 +1,7 @@
 import App from './components/app'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import store from './store/store'
 
-ReactDOM.hydrate(<App />, document.getElementById('main'))
+ReactDOM.hydrate(<Provider store={store}><App /></Provider>, document.getElementById('main'))

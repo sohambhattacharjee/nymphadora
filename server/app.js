@@ -1,10 +1,12 @@
 import App from '../source/components/app'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
+import store from '../source/store/store'
+import { Provider } from 'react-redux'
 
 const serverSideRender = (req, res) => {
 
-    const component = renderToString(<App />)
+    const component = renderToString(<Provider store={store}><App /></Provider>)
 
     res.send(`<html>
             <head><title>TODO App</title></head>
