@@ -1,19 +1,21 @@
 {
   "name": "todoapp",
   "version": "0.0.1",
-  "description": "react- redux isomorphic applicaion for a todo list",
+  "description": "react applicaion my profile",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm run build",
+    "build": "webpack"
   },
   "babel": {
     "presets": [
-      "env",
-      "react"
+      "@babel/preset-env",
+      "@babel/react"
     ],
     "plugins": [
-      "transform-es2015-destructuring",
-      "transform-object-rest-spread"
+      "@babel/plugin-transform-destructuring",
+      "@babel/plugin-proposal-object-rest-spread"
     ]
   },
   "keywords": [
@@ -25,21 +27,23 @@
   "author": "Soham Bhattacharjee",
   "license": "ISC",
   "dependencies": {
-    "babel-register": "^6.26.0",
-    "express": "^4.16.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2"
+    "express": "^4.16.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "6.0.1",
+    "redux": "4.0.1"
   },
   "devDependencies": {
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
+    "@babel/register": "^7.0.0",
+    "@babel/core": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "@babel/plugin-transform-destructuring": "^7.3.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "babel-preset-react-hmre": "^1.1.1",
-    "webpack": "^3.10.0"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
   }
 }
