@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import PropTpes from 'prop-types'
 import { connect } from 'react-redux'
 
 class App extends Component {
@@ -11,7 +9,7 @@ class App extends Component {
         const { todos } = this.props
         return (
             <div className='application-wrapper'>
-                <div>TO-DO's</div>
+                <div>Profile - Soham Bhattacharjee</div>
                 <ul>
                     {
                         todos && todos.map((todo, index) => {
