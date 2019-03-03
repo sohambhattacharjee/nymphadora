@@ -9,10 +9,11 @@ const serverSideRender = (req, res) => {
     const component = renderToString(<Provider store={store}><App /></Provider>)
 
     res.send(`<html>
-            <head><title>Profile - Soham Bhattacharjee</title></head>
+            <head><title>Soham Bhattacharjee</title></head>
+            <link rel='stylesheet' type='text/css' href='/dist/bundle.css'></link>
             <body>
             <div id='main'>${component}</div>
-            <script src='/public/bundle.js'></script>
+            <script src='/dist/bundle.js'></script>
             </body>
             </html>`);
 }

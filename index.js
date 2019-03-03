@@ -1,11 +1,14 @@
 require('@babel/register')
+require.extensions['.scss'] = () => {
+    return
+  }
 const serverSideRendering = require('./server/app').default
 const express = require('express')
 const path = require('path')
 
 const app = express()
 
-app.use('/public', express.static(path.resolve('dist')))
+app.use('/dist', express.static(path.resolve('dist')))
 
 app.use('/', serverSideRendering)
 
