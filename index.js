@@ -7,7 +7,7 @@ const app = express()
 
 app.use('/public', express.static(path.resolve('dist')))
 
-app.use('/todo', serverSideRendering)
+app.use('/', serverSideRendering)
 
 app.listen(3000)
 console.log('app listening on port 3000')
