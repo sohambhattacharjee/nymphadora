@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run build",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "node index"
   },
   "babel": {
     "presets": [
@@ -27,7 +28,6 @@
   "author": "Soham Bhattacharjee",
   "license": "ISC",
   "dependencies": {
-    "babel-register": "^6.26.0",
     "express": "^4.16.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

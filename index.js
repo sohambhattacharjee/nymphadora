@@ -1,4 +1,4 @@
-require('babel-register')
+require('@babel/register')
 const serverSideRendering = require('./server/app').default
 const express = require('express')
 const path = require('path')
