@@ -5,21 +5,21 @@ module.exports = {
   },
   entry: "./source",
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        query: {
-          presets: [ 'env' ]
+        options: {
+          presets: [ '@babel/preset-env' ]
         }
       },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        query: {
-          presets: [ 'env', 'react' ]
+        options: {
+          presets: [ '@babel/preset-env', '@babel/react' ]
         }
       }
     ],
